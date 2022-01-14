@@ -1,1 +1,44 @@
-<p>main works!</p>
+<!--<ul>-->
+
+<!--  <ng-container *ngFor="let color of colors">-->
+<!--    <li *ngIf="color !== 'green'">-->
+<!--      <span>{{ color }}</span>-->
+<!--    </li>-->
+<!--  </ng-container>-->
+
+<!--</ul>-->
+
+<!--<ul>-->
+<!--  <li *ngFor="let color of colors">-->
+<!--    <ng-container [ngSwitch]="color">-->
+<!--      <span *ngSwitchCase="'red'">Favorite color is {{ color }}</span>-->
+<!--      <span *ngSwitchCase="'green'">Current color is {{ color }}</span>-->
+<!--      <span *ngSwitchDefault>Color is {{ color }}</span>-->
+<!--    </ng-container>-->
+<!--  </li>-->
+<!--</ul>-->
+
+<!--<ul>-->
+<!--  <li *ngFor="let color of colors">-->
+<!--    <span [ngStyle]="{'color': color === 'green' ? 'green' : 'red'}">{{ color }}</span>-->
+<!--  </li>-->
+<!--</ul>-->
+
+<!--<ul>-->
+<!--  <li *ngFor="let color of colors">-->
+<!--&lt;!&ndash;    <span [ngClass]="{'warning': color === 'red', 'info': color === 'blue'}">{{ color }}</span>&ndash;&gt;-->
+<!--    <span [class.warning]="color === 'red'"-->
+<!--          [class.info]="color === 'blue'"-->
+<!--          [style.background]="'#d3d3d3'">-->
+<!--      {{ color }}-->
+<!--    </span>-->
+<!--  </li>-->
+<!--</ul>-->
+
+<input type="text" [(ngModel)]="favoriteColor">
+
+<span *ngIf="favoriteColor; else missingColorRef">My color: {{favoriteColor}}</span>
+
+<ng-template #missingColorRef>
+  <h3>Missing favorite color</h3>
+</ng-template>
