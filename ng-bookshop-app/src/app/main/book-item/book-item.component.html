@@ -1,0 +1,18 @@
+<article>
+  <h3> {{ book.title }} </h3>
+
+  <p class="author"
+     [class.blue]="position < 5"
+     [class.orange]="position >= 5 && position < 10"
+     [class.red]="position >= 10">
+    {{ book.author }}
+  </p>
+
+  <p class="summary">
+    {{ book.summary }}
+  </p>
+
+  <div>
+    <button (click)="onClick()">Mark as favorite</button>
+  </div>
+</article>
