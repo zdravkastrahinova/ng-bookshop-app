@@ -5,3 +5,13 @@
 .info {
   color: #52b3e3;
 }
+
+
+section {
+  display: flex;
+
+  app-book-item {
+    width: 25%;
+    margin-right: 10px;
+  }
+}
