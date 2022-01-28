@@ -1,0 +1,34 @@
+<form [formGroup]="formGroup" (ngSubmit)="onSubmit()">
+  <div>
+    <label for="title">Title</label>
+    <input type="text"
+           id="title"
+           formControlName="title">
+
+    <small *ngIf="titleFormControl.touched && titleFormControl.invalid && titleFormControl.errors.required">
+      This field is required
+    </small>
+
+    <small *ngIf="titleFormControl.touched && titleFormControl.invalid && titleFormControl.hasError('maxlength')">
+      This field should contain max {{ titleFormControl.errors.maxlength.requiredLength }}
+    </small>
+  </div>
+
+  <div>
+    <label for="author">Author</label>
+    <input type="text"
+           id="author"
+           formControlName="author">
+  </div>
+
+  <div>
+    <label for="summary">Summary</label>
+    <input type="text"
+           id="summary"
+           formControlName="summary">
+  </div>
+
+  <div>
+    <button type="submit">Save</button>
+  </div>
+</form>
