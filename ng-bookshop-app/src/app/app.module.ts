@@ -9,6 +9,7 @@ import { BookItemComponent } from './main/book-item/book-item.component';
 import { BookTdFormComponent } from './main/book-td-form/book-td-form.component';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { BookReactiveFormComponent } from './main/book-reactive-form/book-reactive-form.component';
+import { HttpClientModule } from '@angular/common/http';
 
 @NgModule({
   declarations: [
@@ -23,7 +24,8 @@ import { BookReactiveFormComponent } from './main/book-reactive-form/book-reacti
   imports: [
     BrowserModule,
     FormsModule,
-    ReactiveFormsModule
+    ReactiveFormsModule,
+    HttpClientModule
   ],
   providers: [],
   bootstrap: [AppComponent]

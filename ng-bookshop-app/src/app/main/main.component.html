@@ -3,19 +3,16 @@
 <hr>
 
 <div>
-  <app-book-td-form></app-book-td-form>
-</div>
-
-<hr>
-
-<div>
   Reactive Form Approach
-  <app-book-reactive-form></app-book-reactive-form>
+  <app-book-reactive-form (listChanged)="onListUpdate()"></app-book-reactive-form>
 </div>
 
 <section>
+  <div *ngIf="errorMessage">{{errorMessage}}</div>
+
   <app-book-item *ngFor="let book of books; let i = index"
                  [book]="book"
                  [position]="i"
-                 (bookClicked)="onMarkAsFavorite($event)"></app-book-item>
+                 (bookClicked)="onMarkAsFavorite($event)"
+                 (bookDeleted)="onBookDelete($event)"></app-book-item>
 </section>

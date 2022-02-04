@@ -12,8 +12,13 @@ export class BookItemComponent {
   @Input() position: number;
 
   @Output() bookClicked: EventEmitter<Book> = new EventEmitter<Book>();
+  @Output() bookDeleted: EventEmitter<number> = new EventEmitter<number>();
 
   onClick(): void {
     this.bookClicked.emit(this.book);
+  }
+
+  onDelete(): void {
+    this.bookDeleted.emit(this.book.id);
   }
 }

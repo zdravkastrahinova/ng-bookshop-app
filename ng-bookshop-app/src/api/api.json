@@ -1,0 +1,28 @@
+{
+  "books": [
+    {
+      "id": 1,
+      "title": "My first book",
+      "summary": "My first book summary",
+      "author": "My first book author"
+    },
+    {
+      "id": 2,
+      "title": "My second book",
+      "summary": "My second book summary",
+      "author": "My second book author"
+    },
+    {
+      "id": 3,
+      "title": "My third book",
+      "summary": "My third book summary",
+      "author": "My third book author"
+    },
+    {
+      "title": "haha",
+      "author": "haha",
+      "summary": "haha",
+      "id": 5
+    }
+  ]
+}
