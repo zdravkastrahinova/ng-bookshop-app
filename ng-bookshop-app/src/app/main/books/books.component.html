@@ -1,0 +1,17 @@
+<h3>Books List</h3>
+
+<div>
+  <a routerLink="/books/create">Create new</a>
+</div>
+
+<p>Favorite is: {{ favoriteBook?.title || '-' }}</p>
+
+<section>
+  <div *ngIf="errorMessage">{{errorMessage}}</div>
+
+  <app-book-item *ngFor="let book of books; let i = index"
+                 [book]="book"
+                 [position]="i"
+                 (bookClicked)="onMarkAsFavorite($event)"
+                 (bookDeleted)="onBookDelete($event)"></app-book-item>
+</section>

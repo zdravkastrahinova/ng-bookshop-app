@@ -10,6 +10,9 @@ import { BookTdFormComponent } from './main/book-td-form/book-td-form.component'
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { BookReactiveFormComponent } from './main/book-reactive-form/book-reactive-form.component';
 import { HttpClientModule } from '@angular/common/http';
+import { BooksComponent } from './main/books/books.component';
+import { Router, RouterModule } from '@angular/router';
+import { AppRoutingModule } from './app-routing.module';
 
 @NgModule({
   declarations: [
@@ -19,13 +22,15 @@ import { HttpClientModule } from '@angular/common/http';
     FooterComponent,
     BookItemComponent,
     BookTdFormComponent,
-    BookReactiveFormComponent
+    BookReactiveFormComponent,
+    BooksComponent
   ],
   imports: [
     BrowserModule,
     FormsModule,
     ReactiveFormsModule,
-    HttpClientModule
+    HttpClientModule,
+    AppRoutingModule
   ],
   providers: [],
   bootstrap: [AppComponent]
