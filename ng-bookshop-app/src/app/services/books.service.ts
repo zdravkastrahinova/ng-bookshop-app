@@ -18,8 +18,20 @@ export class BooksService {
     return this.http.get<Book[]>(this.url);
   }
 
+  getBook$(id: number): Observable<Book> {
+    const url = `${this.url}/${id}`;
+
+    return this.http.get<Book>(url);
+  }
+
   postBook$(book: Book): Observable<Book> {
     return this.http.post<Book>(this.url, book);
+  }
+
+  putBook$(book: Book): Observable<Book> {
+    const url = `${this.url}/${book.id}`;
+
+    return this.http.put<Book>(url, book);
   }
 
   deleteBook$(id: number): Observable<void> {
